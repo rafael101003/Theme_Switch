@@ -1,0 +1,42 @@
+body{
+    background-color: grey;
+}
+#btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 45vh;
+}
+.claro{
+    color: black;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: hidden;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-right: 10px;
+}
+.claro:hover{
+    box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.7);
+}
+.escuro{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: hidden;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin-left: 10px;
+}
+.escuro:hover{
+    box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.7);
+}
