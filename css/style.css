@@ -1,5 +1,15 @@
-body{
-    background-color: grey;
+:root{
+    --bg-color-claro: white;
+    --bg-color-escuro: black;
+    --txt-color-claro: black;
+    --txt-color-escuro: white;
+}
+
+.temaClaro{
+    background-color: var(--bg-color-claro, --txt-color-escuro);
+}
+.temaEscuro{
+    background-color: var(--bg-color-escuro, --txt-color-claro);
 }
 #btn{
     display: flex;
@@ -10,7 +20,7 @@ body{
 }
 .claro{
     color: black;
-    background-color: aliceblue;
+    background-color: var(--bg-color-claro);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +36,7 @@ body{
 }
 .escuro{
     color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    background-color: var(--bg-color-escuro);
     display: flex;
     justify-content: center;
     align-items: center;
