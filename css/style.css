@@ -1,8 +1,8 @@
 :root{
-    --bg-color-dark: rgb(48, 2, 66);
+    --bg-color-dark: rgb(24, 2, 32);
     --txt-color-dark: white;
-    --bg-color-brightness: white;
-    --txt-color-brightness: black;
+    --bg-color-brightness: #e6d2ff;
+    --txt-color-brightness: #1D053A;
 }
 @keyframes pulseBright {
     0% {
@@ -49,24 +49,18 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.inputText{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    border-style: hidden;
-    height: auto;
-    width: 100%;
-    max-width: 50vh;
-    padding: 10px;
-    margin: 30px;
-}
 #btn{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 35vh;
+}
+.bi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vh;
 }
 .btn1{
     background-color: rgb(0, 0, 0);
@@ -81,9 +75,10 @@ h1{
     height: 100px;
     padding: 30px;
     transition: 0.5s;
+    
 }
 .btn1:hover{
-    animation: pulseBright 1s infinite;
+    animation: pulseBright 2s infinite;
 }
 body.dark .btn1{
     background-color: white;
@@ -91,5 +86,5 @@ body.dark .btn1{
     transition: 0.5s;
 }
 body.dark .btn1:hover{
-    animation: pulseDark 1s infinite;
+    animation: pulseDark 2s infinite;
 }
