@@ -1,9 +1,19 @@
+
+/*reset global*/
+*{
+    padding: 0%;
+    margin: 0;
+}
+
+/*variáveis*/
 :root{
     --bg-color-dark: rgb(24, 2, 32);
     --txt-color-dark: white;
     --bg-color-brightness: #e6d2ff;
     --txt-color-brightness: #1D053A;
 }
+
+/*animações*/
 @keyframes pulseBright {
     0% {
         transform: scale(1);
@@ -34,6 +44,21 @@
         transform: scale(1);
     }
 }
+@keyframes jumpLetter {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*estilização do body em geral*/
 body.dark{
     background-color: var(--bg-color-dark);
     color: var(--txt-color-dark);
@@ -44,38 +69,40 @@ body{
     color: var(--txt-color-brightness);
     transition: 0.5s;
 }
-h1{
+
+/*formatação header*/
+header{
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background-color: #6a08e2;
+    padding: 10px;
 }
-#btn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 35vh;
+header h1{
+    color: white;
 }
+
+/**adiciona icone**/
 .bi{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 6vh;
 }
+
+/*estilização dos botões*/
 .btn1{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(22, 3, 29);
     color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;              
+    justify-content: center;    /*faz os itens dentro do botão ficarem alinhado*/
     border-style: hidden;
     border-radius: 100%;
-    width: 100px;
-    height: 100px;
-    padding: 30px;
-    transition: 0.5s;
-    
+    width: 2rem;
+    height: 2rem;
+    padding: 2rem;
+    transition: 0.5s;           /*transição da animação ao clicar*/
 }
 .btn1:hover{
     animation: pulseBright 2s infinite;
@@ -87,4 +114,63 @@ body.dark .btn1{
 }
 body.dark .btn1:hover{
     animation: pulseDark 2s infinite;
+}
+
+/*estilização dos links nav*/
+nav{
+    display: flex;
+    gap: 1rem;
+}
+nav a{
+    text-decoration: none; /*remove sublinhado*/
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: font-size 0.5s ease;
+}
+nav a:hover{
+    font-size: 1.5rem;
+}
+
+/*estilização do titulo da seção*/
+section h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+section h1 span{
+    display: inline-block;
+}
+section h1:hover span{
+    animation: jumpLetter 0.4s ease;
+}
+/*configura o efeito para cada span*/
+section h1 span:nth-child(1){ animation-delay: 0s; }
+section h1 span:nth-child(2){ animation-delay: 0.05s; }
+section h1 span:nth-child(3){ animation-delay: 0.1s; }
+section h1 span:nth-child(4){ animation-delay: 0.15s; }
+section h1 span:nth-child(5){ animation-delay: 0.2s; }
+section h1 span:nth-child(6){ animation-delay: 0.25s; }
+section h1 span:nth-child(7){ animation-delay: 0.3s; }
+section h1 span:nth-child(8){ animation-delay: 0.35s; }
+section h1 span:nth-child(9){ animation-delay: 0.4s; }
+section h1 span:nth-child(10){ animation-delay: 0.45s; }
+section h1 span:nth-child(11){ animation-delay: 0.5s; }
+section h1 span:nth-child(12){ animation-delay: 0.55s; }
+section h1 span:nth-child(13){ animation-delay: 0.6s; }
+section h1 span:nth-child(14){ animation-delay: 0.65s; }
+section h1 span:nth-child(15){ animation-delay: 0.7s; }
+
+
+main p{
+    display: flex;
+    margin-left: 20px;
+    gap: 10px;
+}
+main a{
+    display: flex;
+    font-weight: bold;
 }
